@@ -86,6 +86,9 @@ def caracter_desde_codigo_ascii(numero):
 # Recorremos tanto la altura como la anchura de la imagen y lo que queremos hacer es obtener los colores que contiene cada pixel,
 # para poder luego modificar los binarios de cada color (rojo,verde,azul) para poder insertar el mensaje dentro de la imagen.
 
+# Un problema que hay es que es literalmente imposible abrir una imagen con el titulo que se pide, ya que Image.show, borra el titulo por defecto
+# y no en todos los visores de imagenes funciona correctamente el parametro titulo, documentacion oficial: https://pillow.readthedocs.io/en/stable/reference/Image.html
+
 def ocultar_texto(rutaImagenOriginal):
         # Abrimos la imagen utilizando el modulo PIL
 	imagen = Image.open(rutaImagenOriginal)
